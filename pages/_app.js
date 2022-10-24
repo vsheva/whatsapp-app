@@ -10,6 +10,7 @@ import firebase from "firebase/compat/app";
 function MyApp({Component, pageProps}) {
     const [user, loading] = useAuthState(auth);
 
+    //firebase
     useEffect(()=>{
         if(user) {
             db.collection('users').doc(user.uid).set({
