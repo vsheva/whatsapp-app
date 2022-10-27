@@ -36,7 +36,7 @@
 * type email of first Google account (for example - test@gmail.com)
 * get the message (from " test@gmail.com") and anwer
 
-#### step 3 Congratulations! You've just used artificial whatsapp.
+#### Congratulations! You've just used artificial whatsapp.
 
 
 
