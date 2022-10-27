@@ -30,13 +30,13 @@
 * type email (for example - 123@gmail.com)
 * send the message
 
-#### step2
+#### step 2
 *signin with your another Google account,  click the button "SIGN IN WITH GOOGLE" (use your Google account", for example -  123@gmail.com)
 * click the button "START A NEW CHAT" (or find available chat)
 * type email of first Google account (for example - test@gmail.com)
 * get the message (from " test@gmail.com") and anwer
 
-#### step3 Congratulations! You've just used artificial whatsapp.
+#### step 3 Congratulations! You've just used artificial whatsapp.
 
 
 
