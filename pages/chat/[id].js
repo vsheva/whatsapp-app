@@ -1,16 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import Sidebar from '../../components/Sidebar';
 import ChatScreen from '../../components/ChatScreen';
-import { auth, db } from '../../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth'; //Firebase Hook
 import { useCollection } from 'react-firebase-hooks/firestore';
+import Sidebar from '../../components/Sidebar';
+import { auth, db } from '../../firebase';
 import getRecipientEmail from '../../utils/getRecipientEmail';
 
 const enteredIdChat = ({ chat, messages }) => {
-  console.log('chat', chat);
   const [user] = useAuthState(auth);
+  console.log('chat', chat);
+  console.log('messages', messages);
 
   return (
     <Container>

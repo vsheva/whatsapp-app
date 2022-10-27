@@ -1,4 +1,5 @@
 import React from 'react';
+import { auth, db } from '../firebase';
 import styled from 'styled-components';
 import Avatar from '@material-ui/core/Avatar';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -7,7 +8,6 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Button from '@material-ui/core/Button';
 import * as EmailValidator from 'email-validator';
-import { auth, db } from '../firebase';
 import { useAuthState } from 'react-firebase-hooks/auth'; //Firebase Hook
 import { useCollection } from 'react-firebase-hooks/firestore'; //Firebase Hook
 import Chat from './Chat';

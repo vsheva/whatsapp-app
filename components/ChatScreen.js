@@ -2,20 +2,26 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { useAuthState } from 'react-firebase-hooks/auth'; //Firebase Hook
 import { useCollection } from 'react-firebase-hooks/firestore';
-import { auth, db } from '../firebase';
 import { useRouter } from 'next/router';
 import { Avatar } from '@material-ui/core';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import MicIcon from '@mui/icons-material/Mic';
-import Message from './Message';
 import firebase from 'firebase/compat/app';
+import { auth, db } from '../firebase';
+import getRecipientEmail from '../utils/getRecipientEmail';
+import Message from './Message';
+import TimeAgo from 'timeago-react';
 
 const ChatScreen = ({ chat, messages }) => {
   const [user] = useAuthState(auth);
   const [input, setInput] = useState('');
   const router = useRouter();
+
+  const [recipientSnapshot] = useCollection(
+    db.collection('users').where('email', '==', getRecipientEmail(chat.users, user)),
+  );
 
   const [messagesSnapshot] = useCollection(
     db.collection('chats').doc(router.query.id).collection('messages').orderBy('timestamp', 'asc'),
@@ -59,14 +65,27 @@ const ChatScreen = ({ chat, messages }) => {
     setInput('');
   };
 
+  const recipient = recipientSnapshot?.docs?.[0]?.data();
+  const recipientEmail = getRecipientEmail(chat.users, user);
   return (
     <Container>
       <Header>
-        <Avatar />
+        {recipient ? <Avatar src={recipient?.photoURL} /> : <Avatar>{recipientEmail[0]} </Avatar>}
 
         <HeaderInformation>
-          <h3>Rec Email</h3>
-          <p>Last seen...</p>
+          <h3>{recipientEmail}</h3>
+          {recipientSnapshot ? (
+            <p>
+              Last active:{' '}
+              {recipient?.lastSeen?.toDate() ? (
+                <TimeAgo datetime={recipient?.lastSeen?.toDate()} />
+              ) : (
+                'Unavailable'
+              )}
+            </p>
+          ) : (
+            <p>Loading Last active...</p>
+          )}
         </HeaderInformation>
 
         <HeaderIcons>
@@ -125,7 +144,7 @@ const InputBox = styled.input`
   margin-right: 15px;
 `;
 
-const InputContainer = styled.div`
+const InputContainer = styled.form`
   display: flex;
   align-items: center;
   padding: 10px;
