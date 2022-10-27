@@ -1,4 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# [Whatsapp clone](https://whatsapp-nine-steel.vercel.app/)
+
+### The tech stack is:
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [Styled Components](https://styled-components.com/)
+- [Flexbox](https://en.wikipedia.org/wiki/CSS_Flexible_Box_Layout)
+- [Material UI](https://mui.com)
+- [Next JS](https://nextjs.org/)
+- [SSR](https://nextjs.org/)
+- [Router](https://nextjs.org/docs/api-reference/next/router)
+- [API Routes](https://nextjs.org/docs/api-routes/introduction)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Vercel](https://en.wikipedia.org/wiki/Vercel)
+- [React](https://reactjs.org/)
+- [React Hooks](https://reactjs.org/docs/hooks-faq.html#gatsby-focus-wrapper)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Authentication with Google](https://en.wikipedia.org/wiki/Authentication)
+- [Firebase](https://www.google.com/search?q=firebase&oq=firebase+&aqs=chrome..69i57j35i39j0i67j0i512j69i60l4.5860j0j7&sourceid=chrome&ie=UTF-8)
+- [Firestore Database](https://www.google.com/search?q=firebase&oq=firebase+&aqs=chrome..69i57j35i39j0i67j0i512j69i60l4.5860j0j7&sourceid=chrome&ie=UTF-8)
+
+
+
+
+### To check out the project enter : 
+
+* name (for example, Val Shev);
+* any profile picture URL (for example, https://media-exp1.licdn.com/dms/image/D4E03AQH2gPhvlW9Nvg/profile-displayphoto-shrink_800_800/0/1664786666033?e=1672272000&v=beta&t=Bu6Tl74GxpzgBV6YaN515mWKAQX6eqP423lUkaLHMkA);
+* email (for example, test@test.com);
+* password (for example, test1234);
+* hit "Sign In".
+
+
+### Congratulations! You've just logged in.
+Try to register on your own. Check out the project.
+
+To run project use command: `npm start`
+
+
+### Author
+- Valerii Shevchenko
 
 ## Getting Started
 
@@ -10,25 +50,4 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
