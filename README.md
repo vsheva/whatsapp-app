@@ -26,24 +26,16 @@
 
 #### step 1
 * signin with your Google account; click the button "SIGN IN WITH GOOGLE" (use your Google account, for example - test@gmail.com)
-* click the button "START A NEW CHAT" (or find available chat)
-* type email (for example - 123@gmail.com)
-* send the message
+* click "START A NEW CHAT" button (or search for an available chat)
+* enter your email address (for example - 123@gmail.com)
+* send a message
 
 #### step 2
-* signin with your another Google account,  click the button "SIGN IN WITH GOOGLE" (use your Google account", for example -  123@gmail.com)
-* click the button "START A NEW CHAT" (or find available chat)
-* type email of first Google account (for example - test@gmail.com)
-* get the message (from " test@gmail.com") and anwer
+* signin with your other Google account,  click the button "SIGN IN WITH GOOGLE" (use your Google account", for example -  123@gmail.com)
+* search for an available chat of the first Google account ("test@gmail.com")
+* receive a message (from " test@gmail.com ") and reply
 
 #### Congratulations! You've just used artificial whatsapp.
-
-
-
-
-
-
-
 
 
 ### Author
