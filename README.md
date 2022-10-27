@@ -35,7 +35,7 @@
 * search for an available chat of the first Google account ("test@gmail.com")
 * receive a message (from " test@gmail.com ") and reply
 
-#### Congratulations! You've just used artificial whatsapp.
+#### Congratulations! You have just used artificial whatsapp.
 
 
 ### Author
