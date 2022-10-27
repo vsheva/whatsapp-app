@@ -16,8 +16,9 @@ const ChatScreen = ({ chat, messages }) => {
   const [user] = useAuthState(auth);
   const [input, setInput] = useState('');
   const router = useRouter();
+
   const [messagesSnapshot] = useCollection(
-    db.collection('chats').doc(router.query.id).collection('messages').orderBy('tymestamp', 'asc'),
+    db.collection('chats').doc(router.query.id).collection('messages').orderBy('timestamp', 'asc'),
   );
 
   const showMessages = () => {
@@ -67,6 +68,7 @@ const ChatScreen = ({ chat, messages }) => {
           <h3>Rec Email</h3>
           <p>Last seen...</p>
         </HeaderInformation>
+
         <HeaderIcons>
           <IconButton>
             <AttachFileIcon />
@@ -85,7 +87,7 @@ const ChatScreen = ({ chat, messages }) => {
 
       <InputContainer>
         <InsertEmoticonIcon />
-        <InputBox value={input} type="text" onChange={e => setInput(e.target.value)} />
+        <InputBox value={input} onChange={e => setInput(e.target.value)} />
         <button hidden disabled={!input} type="submit" onClick={sendMessage}>
           Send Message
         </button>
@@ -112,7 +114,7 @@ const Container = styled.div`
   scrollbar-width: none; //Firefox
 `;
 
-const InputBox = styled.div`
+const InputBox = styled.input`
   flex: 1;
   outline: 0;
   border: none;
