@@ -22,19 +22,28 @@
 
 
 
-### To check out the project enter : 
+### To check out the project : 
 
-* name (for example, Val Shev);
-* any profile picture URL (for example, https://media-exp1.licdn.com/dms/image/D4E03AQH2gPhvlW9Nvg/profile-displayphoto-shrink_800_800/0/1664786666033?e=1672272000&v=beta&t=Bu6Tl74GxpzgBV6YaN515mWKAQX6eqP423lUkaLHMkA);
-* email (for example, test@test.com);
-* password (for example, test1234);
-* hit "Sign In".
+#### step 1
+*signin with your Google account; click the button "SIGN IN WITH GOOGLE" (use your Google account, for example - test@gmail.com)
+* click the button "START A NEW CHAT" (or find available chat)
+* type email (for example - 123@gmail.com)
+* send the message
+
+#### step2
+*signin with your another Google account,  click the button "SIGN IN WITH GOOGLE" (use your Google account", for example -  123@gmail.com)
+* click the button "START A NEW CHAT" (or find available chat)
+* type email of first Google account (for example - test@gmail.com)
+* get the message (from " test@gmail.com") and anwer
+
+#### Congratulations! You've just used artificial whatsapp.
 
 
-### Congratulations! You've just logged in.
-Try to register on your own. Check out the project.
 
-To run project use command: `npm start`
+
+
+
+
 
 
 ### Author
