@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styled from 'styled-components';
 import { useAuthState } from 'react-firebase-hooks/auth'; //Firebase Hook
 import { useCollection } from 'react-firebase-hooks/firestore';
@@ -17,6 +17,7 @@ import TimeAgo from 'timeago-react';
 const ChatScreen = ({ chat, messages }) => {
   const [user] = useAuthState(auth);
   const [input, setInput] = useState('');
+  const EndOfMessagesRef = useRef(null);
   const router = useRouter();
 
   const [recipientSnapshot] = useCollection(
@@ -46,8 +47,16 @@ const ChatScreen = ({ chat, messages }) => {
     }
   };
 
+  const scrollToBottom = () => {
+    EndOfMessagesRef.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
   const sendMessage = e => {
     e.preventDefault();
+
     //Update the last seen...
     db.collection('users').doc(user.uid).set(
       {
@@ -63,10 +72,12 @@ const ChatScreen = ({ chat, messages }) => {
       photoURL: user.photoURL,
     });
     setInput('');
+    scrollToBottom();
   };
 
   const recipient = recipientSnapshot?.docs?.[0]?.data();
   const recipientEmail = getRecipientEmail(chat.users, user);
+
   return (
     <Container>
       <Header>
@@ -101,7 +112,7 @@ const ChatScreen = ({ chat, messages }) => {
       <MessageContainer>
         {/*show messages*/}
         {showMessages()}
-        <EndOfMessage />
+        <EndOfMessage ref={EndOfMessagesRef} />
       </MessageContainer>
 
       <InputContainer>
@@ -186,7 +197,9 @@ const HeaderIcons = styled.div`
 
 const IconButton = styled.div``;
 
-const EndOfMessage = styled.div``;
+const EndOfMessage = styled.div`
+  margin-bottom: 50px;
+`;
 
 const MessageContainer = styled.div`
   padding: 30px;
