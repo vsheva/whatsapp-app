@@ -1,6 +1,6 @@
 # [Whatsapp clone](https://whatsapp-nine-steel.vercel.app/)
 
-### The tech stack is:
+###  The tech stack is:
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [Styled Components](https://styled-components.com/)
