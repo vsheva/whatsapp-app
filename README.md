@@ -1,4 +1,4 @@
-# [Whatsapp clone](https://whatsapp-nine-steel.vercel.app/)
+# [Whatsapp ](https://whatsapp-nine-steel.vercel.app/)
 
 ###  The tech stack is:
 
